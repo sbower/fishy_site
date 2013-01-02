@@ -1,0 +1,55 @@
+!!!
+%html
+  %head
+    %title The Coolest Fish
+    %link{:href => "css/bootstrap.min.css", :media => "screen", :rel => "stylesheet"}
+    %link{:href => "css/bootstrap-responsive.min.css", :media => "screen", :rel => "stylesheet"}
+    %link{:href => "css/style.css", :media => "screen", :rel => "stylesheet"}
+
+    %script{:src => "http://code.jquery.com/jquery-latest.js"}
+    %script{:src => "js/bootstrap.min.js"}
+
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "/"} The Coolest Fish
+          .nav-collapse.collapse
+            %ul.nav
+              %li{:id => "li_home"}
+                %a{:href => "/"} Home
+              %li{:id => "li_about"}
+                %a{:href => "/about"} About
+              %li{:id => "li_cont"}
+                %a{:href => "/contact"} Contact
+    .container
+      =yield
+      %hr
+      %footer 
+ 
+    :javascript
+      function GetCurrentPageName() { 
+        var PageURL = document.location.href; 
+        var PageName = PageURL.substring(PageURL.lastIndexOf('/') + 1); 
+
+        return PageName.toLowerCase() ;
+      }
+
+      $(document).ready(function() {
+        var CurrPage = GetCurrentPageName();
+        switch(CurrPage){
+          case '':
+            $('#li_home').addClass('active') ;
+            break;
+          case 'about':
+            $('#li_about').addClass('active') ;
+            break;
+          case 'contact':
+            $('#li_cont').addClass('active') ;
+            break;
+        }
+      });

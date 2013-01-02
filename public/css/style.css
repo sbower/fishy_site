@@ -1,0 +1,46 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background-image:url('/img/furley_bg.png');
+}
+
+.off {
+  color: red;
+}
+
+.temp_label {
+  padding-top: 50px;
+  width: 150px;
+  font: 20px arial,sans-serif;
+  text-align: center;
+
+}
+
+.temp {
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  height: 100px;
+  width:  150px;
+  background-color: #EEE5DE;
+  font: 60px arial,sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  display:table-cell; 
+}
+
+.buffer {
+  height: 25px;
+}
+
+.lights {
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  height: 50px;
+  width:  350px;
+  background-color: #EEE5DE;
+  font: 40px arial,sans-serif;
+  vertical-align: middle;
+  text-align: center;
+  display:table-cell;
+
+}
