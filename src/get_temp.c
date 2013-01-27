@@ -20,7 +20,7 @@
 #include <unistd.h>
 
 #define MAXTIMINGS 100
-#define DHT_PIN 17
+#define DHT_PIN 23 
 
 int readDHT();
 
