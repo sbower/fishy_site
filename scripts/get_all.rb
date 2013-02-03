@@ -4,10 +4,10 @@ room_temp_line = `/home/pi/fishy_site/scripts/get_temp`
 regex = Regexp.new(/t=([\d\.]*) crccheck=(\d)/)
 regex.match(room_temp_line)
 
-if $2 then
+if $2.eql?("1") then
   room_temp  = $1
 else
-  root_temp = 255
+  room_temp = 255
 end
 
 tank_temp_line  = `cat /sys/bus/w1/devices/28-0000043a8a43/w1_slave`
