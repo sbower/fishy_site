@@ -13,14 +13,14 @@
     .row
       .span2
         .temp
-          65&deg;<font size='10px'>C</font>
+          #{@room_temp}&deg;<font size='5px'>C</font>
       .span2
         .temp
-          72&deg;<font size='10px'>C</font>
+          #{@tank_temp}&deg;<font size='5px'>C</font>
     .row
       .span4
         .buffer
     .row
       .span4
         .lights
-          LIGHTS <span class="off"> OFF </span> 
+          LIGHTS <span class="#{@light}"> #{@light.upcase} </span> 

@@ -1,3 +1,29 @@
 .row
-  .span6.offset2
-    %h1 The About Page  
+  .span8.offset2
+    %h1 How it works!
+    %p
+      This project uses the Raspberry Pi to control a few aspects of a small fish tank.  It uses two temprature sensors one that measures the room teprature and one that measures the temprature inside the fish tank.  Also the project provides lighting for the fish tank in the form of super bright 5mm blue LEDs.  The components used for this project are:
+    %ul
+      %li
+        %a{:href => "https://www.adafruit.com/products/998"}
+          Raspberry Pi
+      %li 
+        %a{:href => "https://www.adafruit.com/products/393"}
+          AM2303 External Temp Sensor
+      %li 
+        %a{:href => "https://www.adafruit.com/products/381"}
+          DS18B20
+      %li
+        %a{:href => "https://www.adafruit.com/products/301"}
+          5 5mm Super Bright LEDs
+    %br
+    %a{:href => "/img/circuit-large.png"}
+      %img{:src => "/img/circuit.png", :style => "float:left;"}
+    The circuit diagram is pretty striaght forward.  Note that the DS18B20 works on the Dallas OneWire protocol which requires it to be plugged into GPIO #4.  The OneWire support is a little flaky but has seem to work well so far.  The AM2303 communicates via a timint protocl which you can read more about in the <a href="http://www.adafruit.com/datasheets/DHT22.pdf">datasheet</a>.  The LED setup is very standard, a resistor is used to limit the current and the LEDs are wired in series.
+    %br
+    %br
+    %br
+    %br
+    %br
+    %p
+      This site is run of the Pi and the code is available on <a href="https://github.com/sbower/fishy_site">git hub</a>.  
